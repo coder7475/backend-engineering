@@ -1,0 +1,6 @@
+[submodule "graphql-poc"]
+	path = graphql-poc
+	url = git@github.com:coder7475/graphql-poc.git
+[submodule "socket_programming"]
+	path = socket_programming
+	url = git@github.com:coder7475/socket_programming.git
