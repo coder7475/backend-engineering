@@ -1,0 +1,17 @@
+{
+  "name": "rabbitmq-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "publish": "node publisher.js",
+    "received": "node consumer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.1",
+  "dependencies": {
+    "amqplib": "^1.0.3"
+  }
+}
