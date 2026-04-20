@@ -7,3 +7,12 @@
 [submodule "server-side-events"]
 	path = server-side-events
 	url = git@github.com:coder7475/server-side-events.git
+[submodule "elk-stack"]
+	path = elk-stack
+	url = git@github.com:coder7475/elk-stack.git
+[submodule "go"]
+	path = go
+	url = git@github.com:coder7475/go.git
+[submodule "frameworks"]
+	path = frameworks
+	url = git@github.com:coder7475/nestjs.git
