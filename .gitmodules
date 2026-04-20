@@ -16,3 +16,6 @@
 [submodule "frameworks"]
 	path = frameworks
 	url = git@github.com:coder7475/nestjs.git
+[submodule "nestjs"]
+	path = nestjs
+	url = git@github.com:coder7475/nestjs.git
