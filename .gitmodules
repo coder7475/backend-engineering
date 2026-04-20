@@ -4,3 +4,6 @@
 [submodule "socket_programming"]
 	path = socket_programming
 	url = git@github.com:coder7475/socket_programming.git
+[submodule "server-side-events"]
+	path = server-side-events
+	url = git@github.com:coder7475/server-side-events.git
