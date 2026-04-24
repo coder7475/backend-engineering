@@ -10,12 +10,15 @@
 [submodule "elk-stack"]
 	path = elk-stack
 	url = git@github.com:coder7475/elk-stack.git
-[submodule "go"]
-	path = go
-	url = git@github.com:coder7475/go.git
 [submodule "frameworks"]
 	path = frameworks
 	url = git@github.com:coder7475/nestjs.git
 [submodule "nestjs"]
 	path = nestjs
 	url = git@github.com:coder7475/nestjs.git
+[submodule "languages/rust-by-practice-solutions"]
+	path = languages/rust-by-practice-solutions
+	url = git@github.com:coder7475/rust-by-practice-solutions.git
+[submodule "coding-challenges"]
+	path = coding-challenges
+	url = git@github.com:coder7475/coding-challenges.git
