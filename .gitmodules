@@ -22,3 +22,12 @@
 [submodule "coding-challenges"]
 	path = coding-challenges
 	url = git@github.com:coder7475/coding-challenges.git
+[submodule "QA"]
+	path = QA
+	url = git@github.com:coder7475/QA.git
+[submodule "databases/sql"]
+	path = databases/sql
+	url = git@github.com:coder7475/sql.git
+[submodule "databases/mongodb-exploration-in-depth"]
+	path = databases/mongodb-exploration-in-depth
+	url = git@github.com:coder7475/mongodb-exploration-in-depth.git

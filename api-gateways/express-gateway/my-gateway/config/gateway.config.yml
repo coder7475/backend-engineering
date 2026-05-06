@@ -1,0 +1,59 @@
+http:
+  port: 8080
+
+admin:
+  port: 9876
+  host: localhost
+
+apiEndpoints:
+  # cart service (all routes)
+  cartApi:
+    host: localhost
+    paths: '/cart/*'
+
+  # user service (all routes)
+  userApi:
+    host: localhost
+    paths: '/user/*'
+
+serviceEndpoints:
+  cart:
+    url: 'http://localhost:3002'
+
+  user:
+    url: 'http://localhost:3001'
+
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+
+pipelines:
+  # cart pipeline
+  cartPipeline:
+    name: cart-pipeline
+    apiEndpoints:
+      - cartApi
+    policies:
+      - key-auth:
+      - proxy:
+          - action:
+              serviceEndpoint: cart
+              changeOrigin: true
+              stripPath: true
+
+  # user pipeline
+  userPipeline:
+    apiEndpoints:
+      - userApi
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: user
+              changeOrigin: true
+              stripPath: true
