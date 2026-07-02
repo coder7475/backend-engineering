@@ -1,0 +1,22 @@
+# docker-compose.yml
+services:
+  traefik:
+    image: traefik:v3.7
+    container_name: treafik-demo-1 
+    networks:
+      - demo
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    environment:
+      - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - ./data/certs/:/var/traefik/certs/:rw
+    restart: unless-stopped
+
+networks: 
+  demo:
+    external: true

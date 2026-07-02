@@ -1,0 +1,20 @@
+# whoami.yml
+services:
+  whoami:
+    image: traefik/whoami
+    container_name: whomai_container
+    networks:
+      - demo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.my-http-router.rule=Host(`test.robiulhossain.com`)"
+      - "traefik.http.routers.my-http-router.entrypoints=web" 
+      - "traefik.http.routers.my-https-router.rule=Host(`test.robiulhossain.com`)"
+      - "traefik.http.routers.my-https-router.entrypoints=websecure"
+      - "traefik.http.routers.my-https-router.tls=true"
+      - "traefik.http.routers.my-https-router.tls.certresolver=cloudflare"
+
+networks:
+  demo:
+    external: true
+
